@@ -10,9 +10,12 @@ function Navbar() {
       setMenuState("menu");
     }
   };
+  const closeMenu = () => {
+    setMenuState("menu");
+  };
 
   return (
-    <nav className=" md:flex items-center justify-around px-4 py-6">
+    <nav className="bg-white md:flex items-center justify-around sticky top-0 px-4 py-6">
       <div className="flex justify-between items-center">
         <span className="text-4xl">
           <a href="#home">Oluwaseyi Afolayan</a>
@@ -43,16 +46,24 @@ function Navbar() {
           } transition-all ease-in duration-500`}
         >
           <li>
-            <a href="#about">About</a>
+            <a onClick={closeMenu} href="#about">
+              About
+            </a>
           </li>
           <li>
-            <a href="#experience">Experience</a>
+            <a onClick={closeMenu} href="#experience">
+              Experience
+            </a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <a onClick={closeMenu} href="#projects">
+              Projects
+            </a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a onClick={closeMenu} href="#contact">
+              Contact
+            </a>
           </li>
         </ul>
       </div>
